@@ -12,10 +12,10 @@ python:
 
 install:
   # Install requirements.
-  - sudo apt-get install build-essential libssl-dev libffi-dev python3-dev
-  - pip3 install --upgrade pip
-  - pip3 install ansible
-  - pip3 install -r ansible-requirements.txt
+  - sudo apt-get install python3-pip build-essential libssl-dev libffi-dev python3-dev
+  - pip install --upgrade pip --user
+  - pip install ansible --user
+  - pip install -r ansible-requirements.txt --user
 
   # Install ansible-container from source.
   # - git clone https://github.com/ansible/ansible-container.git
@@ -24,7 +24,7 @@ install:
   # - cd ..
 
   # Install ansible-container from pip.
-  - pip3 install ansible-container[docker]
+  - pip install ansible-container[docker] --user
 
 script:
   - set -e
