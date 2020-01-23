@@ -24,7 +24,7 @@ install:
   # - cd ..
 
   # Install ansible-container from pip.
-  - pip install ansible-container[docker]
+  - sudo pip3 install ansible-bender
 
 script:
   - set -e
