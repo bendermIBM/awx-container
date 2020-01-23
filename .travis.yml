@@ -7,6 +7,8 @@ arch:
 language: python
 dist: xenial
 services: docker
+virtualenv:
+  system_site_packages: true
 python:
   - "3.8"
 
