@@ -5,13 +5,14 @@ arch:
   - ppc64le
   - s390x
 language: python
+dist: xenial
 services: docker
 python:
   - "3.6"
 
 install:
   # Install requirements.
-  - sudo apt-get install python-apt
+  - sudo apt-get install python-apt build-essential libssl-dev libffi-dev python-dev
   - pip install ansible
   - pip install -r ansible-requirements.txt
 
