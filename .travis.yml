@@ -12,7 +12,7 @@ python:
 
 install:
   # Install requirements.
-  - sudo apt-get install python3-pip build-essential libssl-dev libffi-dev python3-dev
+  - sudo apt-get install python3-pip build-essential libssl-dev libffi-dev python3-dev software-properties-common
   - pip install --upgrade pip 
   - pip install ansible 
   - pip install -r ansible-requirements.txt
