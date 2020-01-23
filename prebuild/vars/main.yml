@@ -7,8 +7,8 @@ awx_repo_version: devel
 awx_keep_updated: yes
 awx_image_build_path: "{{ awx_repo_dir }}/installer/roles/image_build"
 
-awx_web_image: awx_web
-awx_task_image: awx_task
+awx_web_image: bendermibm/awx_web
+awx_task_image: bendermibm/awx_task
 docker_base_path: "/tmp/docker-image"
 awx_sdist_file: ''
 

@@ -102,15 +102,16 @@
     path: "{{ docker_base_path }}"
     dockerfile: Dockerfile
     name: "{{ awx_web_image }}"
-    tag: "{{ awx_repo_version }}"
+    tag: "{{ awx_repo_version }}-{{ ansible_architecture }}"
+    push: yes
 
 - name: Build base task image
   docker_image:
     path: "{{ docker_base_path }}"
     dockerfile: Dockerfile.task
     name: "{{ awx_task_image }}"
-    tag: "{{ awx_repo_version }}"
-    pull: no
+    tag: "{{ awx_repo_version }}-{{ ansible_architecture }}"
+    push: yes
 
 - name: Clean docker base directory
   file:

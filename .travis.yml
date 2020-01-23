@@ -1,8 +1,12 @@
 ---
+os: linux
+arch:
+  - amd64
+  - ppc64le
+  - s390x
 language: python
 services: docker
 python:
-  - "2.7"
   - "3.6"
 
 install:
