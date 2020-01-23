@@ -7,14 +7,12 @@ arch:
 language: python
 dist: xenial
 services: docker
-virtualenv:
-  system_site_packages: true
 python:
   - "3.8"
 
 install:
   # Install requirements.
-  - sudo apt-get install python3-pip build-essential libssl-dev libffi-dev python3-dev software-properties-common
+  - sudo apt-get install build-essential libssl-dev libffi-dev software-properties-common
   - pip install --upgrade pip 
   - pip install ansible 
   - pip install -r ansible-requirements.txt
